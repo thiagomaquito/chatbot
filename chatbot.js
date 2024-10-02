@@ -1,7 +1,4 @@
 // leitor de qr code
-const browser = await puppeteer.launch({
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
-});
 const qrcode = require('qrcode-terminal');
 const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js'); // Mudança Buttons
 const client = new Client();
@@ -21,7 +18,9 @@ const delay = ms => new Promise(res => setTimeout(res, ms)); // Função que usa
 // Funil
 
 client.on('message', async msg => {
-
+const browser = await puppeteer.launch({
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
     if (msg.body.match(/(teste)/i) && msg.from.endsWith('@c.us')) {
 
         const chat = await msg.getChat();
