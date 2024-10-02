@@ -18,9 +18,6 @@ const delay = ms => new Promise(res => setTimeout(res, ms)); // Função que usa
 // Funil
 
 client.on('message', async msg => {
-const browser = await puppeteer.launch({
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
-});
     if (msg.body.match(/(teste)/i) && msg.from.endsWith('@c.us')) {
 
         const chat = await msg.getChat();
