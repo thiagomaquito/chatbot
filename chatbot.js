@@ -15,22 +15,7 @@ client.initialize();
 
 const puppeteer = require('puppeteer');
 
-(async() => {
-
-    const browser = await puppeteer.launch({
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox'
-        ]
-    });
-
-    const page = await browser.newPage();
-
-    await page.goto('https://www.google.com/', {waitUntil: 'networkidle2'});
-
-    browser.close();
-
-})();
+const browser = await puppeteer.launch({args: ['--no-sandbox']});
 
 const delay = ms => new Promise(res => setTimeout(res, ms)); // Função que usamos para criar o delay entre uma ação e outra
 
