@@ -4,7 +4,7 @@ const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js'); // M
 const client = new Client();
 const browser = await puppeteer.launch({
   executablePath: '/usr/bin/chromium-browser'
-})
+});
 // serviço de leitura do qr code
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
