@@ -1,8 +1,20 @@
 const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const client = new Client({
+    webVersion: "2.2325.3",
+    webVersionCache: {
+    type: "remote",
+    remotePath: "https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2325.3.html",
+    },
     puppeteer: {
-        args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-setuid-sandbox'],
+    args: ["--no-sandbox",
+      "--no-first-run",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--disable-gpu",
+      "--single-process",
+      "--no-zygote",],
     },
     authStrategy: new LocalAuth()
 });
