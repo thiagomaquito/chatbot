@@ -68,7 +68,7 @@ client.on('message', async msg => {
         
     }
 
- /*   if (msg.body ==='Olá, quero saber mais informações sobre curso de automaquiagem.' && msg.from.endsWith('@c.us')) {
+    if (msg.body ==='Olá, quero saber mais informações sobre curso de automaquiagem.' && msg.from.endsWith('@c.us')) {
 
         const chat = await msg.getChat();
         await chat.sendStateTyping(); // Simulando Digitação
@@ -79,7 +79,7 @@ client.on('message', async msg => {
         await delay(5000); //delay de 5 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await client.sendMessage(msg.from,'Segue abaixo as informações sobre o curso de automaquiagem');
-        const media = await MessageMedia.fromFilePath('./images/curso_automake.jpeg');
+        const media = await MessageMedia.fromFilePath('./images/automaquiagem_dossie.jpeg');
         await client.sendMessage(msg.from, media);
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(3000); //delay de 3 segundos        
@@ -87,7 +87,7 @@ client.on('message', async msg => {
         let labels = (await chat.getLabels()).map(l => l.id);
         labels.push('13');
         await chat.changeLabels(labels);
-    } */
+    } 
 });
 
 process.on("SIGINT", async () => {
