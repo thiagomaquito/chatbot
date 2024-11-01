@@ -79,7 +79,7 @@ client.on('message', async msg => {
         await delay(5000); //delay de 5 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await client.sendMessage(msg.from,'Segue abaixo as informações sobre o curso de automaquiagem');
-        const media = await MessageMedia.fromFilePath('./images/automaquiagem_dossie.jpeg');
+        const media = await MessageMedia.fromFilePath('./images/automaquiagem_dossie.pdf');
         await client.sendMessage(msg.from, media);
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(3000); //delay de 3 segundos        
