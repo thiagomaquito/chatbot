@@ -68,7 +68,7 @@ client.on('message', async msg => {
         
     }
 
-    if (msg.body ==='Olá, quero saber mais informações sobre curso de automaquiagem.' && msg.from.endsWith('@c.us')) {
+ /*   if (msg.body ==='Olá, quero saber mais informações sobre curso de automaquiagem.' && msg.from.endsWith('@c.us')) {
 
         const chat = await msg.getChat();
         await chat.sendStateTyping(); // Simulando Digitação
@@ -88,7 +88,7 @@ client.on('message', async msg => {
         labels.push('13');
         await chat.changeLabels(labels);
     }
-});
+});*/
 
 process.on("SIGINT", async () => {
     console.log("(SIGINT) Shutting down...");
