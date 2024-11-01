@@ -87,8 +87,8 @@ client.on('message', async msg => {
         let labels = (await chat.getLabels()).map(l => l.id);
         labels.push('13');
         await chat.changeLabels(labels);
-    }
-});*/
+    } */
+});
 
 process.on("SIGINT", async () => {
     console.log("(SIGINT) Shutting down...");
